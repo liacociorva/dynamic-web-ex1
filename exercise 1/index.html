@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Box Model</a>
+            <a href="#">Flexbox</a>
+            <a href="#">Positioning Elements</a>
+            <a href="#">Heading Usage</a>
+            <a href="#">Simple Javascript</a>
+        </nav>
+    </header>
+    <main>
+        <!--CSS Box Model Section-->
+        <section class = "section-wrapper">
+            <div class = "interior">
+
+                <h1>CSS Box Model</h1>
+                <p>/* Padding is inside of the element in CSS */</p>
+                <p><strong>padding: 40px; (inside)</strong></p>
+
+                <p>/* Margin is outside of the element in CSS */</p>
+                <p><strong>margin: 40px; (outside)</strong></p>
+
+                <p>/* Border is added to width and height of element in CSS */</p>
+                <p><strong>padding: 10px solid green;</strong></p>
+
+            </div>
+        </section>
+        <!--FlexBox Model Section-->
+        <section>
+            <div class="flex-interior">
+                <div class="flex-parent">
+                    <div class = "flex-child flex-child-big">
+                    <h1>Display: Flex</h1>
+                </div>
+            </div>
+            <div class="flex-parent">
+                <div class = "flex-child"></div>
+                <div class = "flex-child"></div>
+                <div class = "flex-child"></div>
+            </div>
+            <div class="flex-parent flex-parent-stacked">
+                <div class = "flex-child"></div>
+                <div class = "flex-child"></div>
+                <div class = "flex-child"></div>
+            </div>
+        </div>
+
+        </section>
+        <!--Positioning Elements Section-->
+        <section class = "positioning-wrapper">
+            <div class = "interior interior--positioning">
+                <h1>Positioning Elements</h1>
+                <div class = "circle" style ='right: 20px; top: 300px'></div>
+                <div class = "circle" style ='left: 50px; bottom: 100px'></div>
+                <div class = "circle" style ='right: 200px; bottom: 30px'></div>
+                <div class = "square" style ='left: 300px; top: 300px'></div>
+                <div class = "square" style ='right: 30px; bottom: 20px'></div>
+            </div>
+        </section>
+        <!--Heading Usage Section-->
+        <section>
+            <div class = "interior">
+                <h1>Highest level header (h1)</h1>
+                <h2>Subsection of the header one (h2)</h2>
+                <p>This is a paragraph!</p>
+                <h3>Header three is a subsection of header two (h3)</h3>
+                <h4>This is a subsection of the third header (h4)</h4>
+                <p>This is another praragraph!!</p>
+                <p>Another paragraph...</p>
+            </div>
+        </section>
+        <!--Simple Javascript Section-->
+        <section>
+            <div class = 'interior'>
+                <h1>Simple Javascript</h1>
+                <script>
+                    let count = 0;
+
+                    function increaseCount() {
+                        count++;
+                        const countIndicator = document.querySelector('.count-indicator');
+                        return (countIndicator.innerHTML = count);
+                    }
+                    function decreaseCount() { //streamlined
+                        count--;
+                        return (document.querySelector('.count-indicator').innerHTML = count);
+                    }
+                </script>
+                <p>Count: <span class = 'count-indicator'>0</span></p>
+                <button onClick='increaseCount()'>Click to increase!</button>
+                <button onClick='decreaseCount()'>Click to decrease!</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
